@@ -91,7 +91,7 @@ USE_TZ = True
 
 # Parse database configuration from $DATABASE_URL
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config(default='postgres://postgres:fmonsantoadmin@localhost/sheeties-local')
+DATABASES['default'] = dj_database_url.config(default='postgres://postgres:fmonsantoadmin@localhost:5432/sheeties_local')
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -102,6 +102,10 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = '/home/francisco/sheeties-django/sheeties/'
+MEDIA_URL ='/media/'
+
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),

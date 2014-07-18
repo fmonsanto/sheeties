@@ -1,0 +1,9 @@
+{% if comics %}
+    <ul>
+    {% for comic in comics %}
+        <li><a href="/comics/{{ comic.id }}/">{{ comic.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No comics are available.</p>
+{% endif %}
